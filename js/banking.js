@@ -38,10 +38,14 @@ document.getElementById('deposit-button').addEventListener('click', function () 
 
 //handle withdro event hendlear
 document.getElementById('withdraw-button').addEventListener('click', function () {
+    // /input 
     const withdrawInput = document.getElementById('withdraw-input');
-    const previousWithdrawText = withdrawInput.value;
-    const newWithdrawAmount = parseFloat(previousWithdrawText);
-    const newWithdraTotal =
-        console.log(withdrawAmountText)
+    const withdrawAmountText = withdrawInput.value;
+    const newWithdrawAmount = parseFloat(withdrawAmountText);
+    console.log(withdrawAmountText);
+
+    //set withdraw
+    const withdraTotal = document.getElementById('')
+    console.log(withdrawAmountText)
 
 })
