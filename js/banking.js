@@ -52,12 +52,17 @@ document.getElementById('withdraw-button').addEventListener('click', function ()
     const newWithdrawTotal = previousWithdrawTotal + newWithdrawAmount;
     withdraTotal.innerText = newWithdrawTotal;
 
-    // clear withdraw input
-    withdrawInput.value = '';
-
+    // update balance 
 
     console.log(withdrawAmountText)
+    const balanceTatal = document.getElementById('balance-total');
+    const previousBalanceText = balanceTatal.innerText
+    const previousBalanceTotal = parseFloat(previousBalanceText);
+    const newBalanceTotal = previousBalanceTotal - newWithdrawAmount;
+    balanceTatal.innerText = newBalanceTotal;
 
+    // clear withdraw input
+    withdrawInput.value = '';
 
 
 })
