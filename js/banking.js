@@ -3,19 +3,45 @@
 //first get button
 document.getElementById('deposit-button').addEventListener('click', function () {
 
-    //get  the amount deposited
+    //get  the amount deposited-------------------------------------
     // get input field------- 
     const depositInput = document.getElementById('deposit-input');
     //get input value---------
-    const depositAmmount = depositInput.value;
-    console.log(depositAmmount);
+    const newDeposittext = depositInput.value;
+    const newDepositAmmount = parseFloat(newDeposittext);
+    // console.log(depositAmmount);
 
+    // update Deposit total----------------------------------------------
     // whice position value show
     const depositTatal = document.getElementById('deposit-total');
+    // old amount
+    const previousDepositText = depositTatal.innerText;
+    const previousDepositAmount = parseFloat(previousDepositText);
+    //for sum
+    const newDepositTotal = previousDepositAmount + newDepositAmmount;
+
     // value set
-    depositTatal.innerText = depositAmmount;
+    depositTatal.innerText = newDepositTotal;
+
+    //update account blance------------------------------------------------
+    const balanceTatal = document.getElementById('balance-total');      //1
+    const balanceTotalText = balanceTatal.innerText;                //2
+    const previousBalanceTotal = parseFloat(balanceTotalText);          //3
+    const newBalanceTotal = previousBalanceTotal + newDepositAmmount;   //4
+    balanceTatal.innerText = newBalanceTotal;                           //05 get 2
+
 
     //clear the deposit input field
     depositInput.value = '';
+
+})
+
+//handle withdro event hendlear
+document.getElementById('withdraw-button').addEventListener('click', function () {
+    const withdrawInput = document.getElementById('withdraw-input');
+    const previousWithdrawText = withdrawInput.value;
+    const newWithdrawAmount = parseFloat(previousWithdrawText);
+    const newWithdraTotal =
+        console.log(withdrawAmountText)
 
 })
